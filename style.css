@@ -792,7 +792,7 @@ span {
 @media (max-width: 480px) {
   .hero {
     padding: 10rem 5% 0;
-    background-position: 40% 60%;
+    background-position: 50% 60%;
   }
   .hero-text h1 {
     width: 70%;
@@ -804,8 +804,5 @@ span {
 @media (max-width: 400px) {
   .hero {
     background-position: 50% 60%;
-  }
-  .hero-text h1 {
-    width: 100%;
   }
 }
