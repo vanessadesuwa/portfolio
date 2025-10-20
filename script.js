@@ -20,3 +20,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const mobileMenu = document.querySelector(".mobile-menu");
+const overLay = document.querySelector(".overlay");
+const closeMenu = document.querySelector(".close-menu");
+const menuIcon = document.querySelector(".menu-icon");
+const navS = document.querySelectorAll(".mobile-menu nav a");
+
+menuIcon.addEventListener("click", () => {
+  overLay.classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
+  mobileMenu.classList.toggle("open");
+});
+
+closeMenu.addEventListener("click", () => {
+  overLay.classList.toggle("open");
+  document.body.classList.toggle("no-scroll");
+  mobileMenu.classList.toggle("open");
+});
+
+navS.forEach((nav) => {
+  nav.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+    overLay.classList.toggle("open");
+    document.body.classList.toggle("no-scroll");
+  });
+});
