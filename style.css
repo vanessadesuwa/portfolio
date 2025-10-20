@@ -784,11 +784,16 @@ span {
     width: 50%;
   }
 
+  .about-text {
+    text-align: center;
+  }
+
   .floating-socials {
     top: 100%;
     transform: translateY(-100%);
   }
 }
+
 @media (max-width: 480px) {
   .hero {
     padding: 10rem 5% 0;
@@ -799,6 +804,12 @@ span {
   }
   .hero-text h2 {
     width: 50%;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero-text h1 {
+    width: 60%;
   }
 }
 /* @media (max-width: 400px) {
