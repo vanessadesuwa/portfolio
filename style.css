@@ -801,8 +801,8 @@ span {
     width: 50%;
   }
 }
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
   .hero {
     background-position: 50% 60%;
   }
-}
+} */
