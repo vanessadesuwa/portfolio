@@ -773,6 +773,7 @@ span {
 
   .hero {
     background-position: 30% 60%;
+    background-size: cover;
   }
 
   .hero-text h1 {
@@ -791,5 +792,10 @@ span {
 @media (max-width: 480px) {
   .hero {
     padding: 10rem 5% 0;
+  }
+}
+@media (max-width: 400px) {
+  .hero-text h1 {
+    width: 70%;
   }
 }
