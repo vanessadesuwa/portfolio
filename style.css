@@ -92,11 +92,12 @@ body.no-scroll {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 5% 0rem;
+  padding: 3rem 5% 0rem;
   position: relative;
   overflow: hidden;
 
@@ -105,7 +106,13 @@ body.no-scroll {
   background-repeat: no-repeat;
   background-size: 130% auto;
   /* background-position: 250px 30%; */
-  background-position: 40% 30%;
+  background-position: 40% 40%;
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    background-position: 40% 30%;
+  }
 }
 
 .hero::before {
@@ -364,6 +371,11 @@ span {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
   position: relative;
+}
+
+.about-image img {
+  transition: opacity 1s ease;
+  opacity: 1;
 }
 
 .about-image::before {
@@ -685,8 +697,6 @@ span {
 
   .mobile-menu.open {
     transform: translateX(0);
-    visibility: visible;
-    /* display: block; */
   }
 
   .mobile-menu {
