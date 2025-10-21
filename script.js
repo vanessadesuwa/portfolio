@@ -54,12 +54,12 @@ let index = 0;
 const aboutPicture = document.querySelector(".about-image img");
 
 const changeImage = () => {
-  aboutPicture.style.opacity = 0;
+  aboutPicture.style.opacity = 0.5;
   setTimeout(() => {
     index = (index + 1) % images.length;
     aboutPicture.src = images[index];
     aboutPicture.style.opacity = 1;
-  }, 500);
+  }, 1000);
 };
 
 setInterval(changeImage, 10000);
