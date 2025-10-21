@@ -57,9 +57,9 @@ const changeImage = () => {
   aboutPicture.style.opacity = 0;
   setTimeout(() => {
     index = (index + 1) % images.length;
-    profilePic.src = images[index];
+    aboutPicture.src = images[index];
     aboutPicture.style.opacity = 1;
   }, 500);
 };
 
-setInterval(changeImage, 30000);
+setInterval(changeImage, 10000);
