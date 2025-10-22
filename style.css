@@ -106,13 +106,7 @@ body.no-scroll {
   background-repeat: no-repeat;
   background-size: 130% auto;
   /* background-position: 250px 30%; */
-  background-position: 40% 40%;
-}
-
-@media (min-width: 1440px) {
-  .hero {
-    background-position: 40% 30%;
-  }
+  background-position: 40% 35%;
 }
 
 .hero::before {
@@ -389,6 +383,7 @@ span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   transition: opacity 2.5s ease;
 }
 
@@ -592,6 +587,12 @@ span {
 }
 
 /* Responsive */
+@media (min-width: 1440px) {
+  .hero {
+    background-position: 40% 30%;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-text p:nth-child(4) {
     display: none;
@@ -599,6 +600,16 @@ span {
 
   .about-text h2 span {
     display: none;
+  }
+
+  .hero {
+    background-position: 40% 40%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-text .subtitle {
+    width: 60%;
   }
 }
 
