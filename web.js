@@ -54,3 +54,16 @@ document.querySelectorAll(".tech-card, .project-card").forEach((el) => {
   el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
   observer.observe(el);
 });
+
+const openMenu = document.querySelector(".open-menu");
+const closeMenu = document.querySelector(".close-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+const toggleMobileMenu = () => {
+  mobileMenu.classList.toggle("open");
+  closeMenu.classList.toggle("open");
+  openMenu.classList.toggle("close");
+};
+
+openMenu.addEventListener("click", toggleMobileMenu);
+closeMenu.addEventListener("click", toggleMobileMenu);
