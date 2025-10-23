@@ -33,6 +33,16 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
       entry.target.style.transform = "translateY(0)";
+      // Remove the inline transform style after the transition is complete
+      // so that the CSS hover transform can work.
+      entry.target.addEventListener(
+        "transitionend",
+        () => {
+          entry.target.style.removeProperty("transform");
+        },
+        { once: true }
+      );
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);

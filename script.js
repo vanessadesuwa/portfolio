@@ -44,10 +44,10 @@ navS.forEach((nav) => {
 });
 
 const images = [
-  "images/pic1.jpg",
-  "images/pic2.jpg",
-  "images/pic3.jpg",
-  "images/pic4.jpg",
+  "images/about vanessa 1.jpg",
+  "images/about vanessa 2.jpg",
+  "images/about vanessa 3.jpg",
+  "images/about vanessa 4.jpg",
 ];
 
 let index = 0;
