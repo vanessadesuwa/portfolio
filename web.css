@@ -457,6 +457,7 @@ nav {
 .cta h2 {
   font-size: 2.5rem;
   font-weight: 700;
+  line-height: 1.1;
 }
 
 .cta p {
@@ -604,7 +605,7 @@ footer {
   top: 5rem;
   left: 0;
   right: 0;
-  height: 40vh;
+  height: auto;
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border-color);
   z-index: 900;
@@ -726,7 +727,13 @@ footer {
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 576px) {
+  .section-header p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 440px) {
   .project-btn {
     margin-left: 0;
     margin-top: 1.5rem;
