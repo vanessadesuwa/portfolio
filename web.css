@@ -736,6 +736,9 @@ footer {
 
 @media (max-width: 440px) {
   .project-btn {
+    display: block;
+    width: fit-content;
+    justify-self: center;
     margin-left: 0;
     margin-top: 1.5rem;
   }
