@@ -614,6 +614,7 @@ footer {
   align-items: center;
   transition: all 0.3s ease;
   transform: translateY(-100%);
+  padding: 1rem 0;
 }
 
 .mobile-menu.open {
