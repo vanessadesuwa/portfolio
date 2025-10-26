@@ -1,5 +1,5 @@
 // Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+document.querySelectorAll("a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
@@ -58,3 +58,32 @@ document
     el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(el);
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Progress Bar Animation
+  const progressBars = document.querySelectorAll(".progress-bar");
+  progressBars.forEach((bar) => {
+    const targetWidth = bar.style.width;
+    bar.style.width = "0%";
+
+    // Animate after a short delay
+    setTimeout(() => {
+      bar.style.width = targetWidth;
+      bar.style.transition = "width 1s ease-out"; // Add transition after initial load
+    }, 500);
+  });
+
+  // 2. Case Study Sidebar (Basic active state toggle)
+  const navItems = document.querySelectorAll(".case-study-nav .nav-item");
+  navItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      // Remove active class from all
+      navItems.forEach((i) => i.classList.remove("active"));
+      // Add active class to the clicked item
+      this.classList.add("active");
+
+      // In a real application, this would trigger content change
+      console.log(`Loading content for: ${this.textContent}`);
+    });
+  });
+});
