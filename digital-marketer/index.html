@@ -30,12 +30,22 @@
   
             
             <button class="mobile-menu-btn" aria-label="Menu">
-              <i class="bx bx-menu"></i>
-            </button>
+          <i class="bx bx-x close-menu"></i>
+          <i class="bx bx-menu open-menu"></i>
+        </button>
           
 
           
         </header>
+
+        <ul class="mobile-menu">
+      <li><a href="./index.html" target="_blank">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Resume</a></li>
+      <li><a href="#home">Contact</a></li>
+    </ul>
+
         <div class="top-header">
             <a href="#" class="opportunities">
               <i class="bx bxs-circle"></i>Open to new opportunities
@@ -87,7 +97,7 @@
                 </p>
 
                 <div class="contact-info">
-                  <p>
+                  
                     
                     <a href="mailto:vanessaomoragbon@outlook.com" class="btn btn-primary"
                       >Lets Work Together <i class="bx bx-mail-send"></i>
@@ -95,7 +105,7 @@
                     <a href="#services" class="btn btn-secondary"
                 >View Case Studies <i class="bx bx-right-arrow-alt"></i
               ></a>
-                  </p>
+                
                 </div>
               </div>
               
@@ -103,7 +113,7 @@
           </section>
           
   <section class="case-studies-section">
-    <div class="container">
+    
       <div class="section-header">
         <p class="overline">SUCESS STORIES</p>
         <h1 class="main-title">Case Studies</h1>
@@ -115,17 +125,17 @@
       <div class="case-study-layout">
         <div class="case-study-sidebar">
           <div class="case-study-nav">
-            <a href="#" class="nav-item active">
+            <a href="#" class="nav-item active" data-target="article-product-launch">
               <span>Product Launch</span>
             <span>OrderSounds</span>
             <span>Beat Marketplace</span>
           </a>
-            <a href="#" class="nav-item">
+            <a href="#" class="nav-item" data-target="article-community-building">
               <span>Community Building</span>
             <span>Creacove Studios</span>
             <span>Entertainment Agency</span>
           </a>
-            <a href="#" class="nav-item">
+            <a href="#" class="nav-item" data-target="article-rebrand">
               <span>Rebrand</span>
             <span>Creacove</span>
             <span>B2B SaaS</span>
@@ -134,7 +144,7 @@
          </div>
         </div>
 
-        <article class="case-study-card">
+        <article class="case-study-card" id="article-product-launch">
           <div class="card-content">
             <div class="case-study-card-texts">
               <h2 class="card-title">Product Launch</h2>
@@ -196,7 +206,7 @@
 
               <div class="strategies-tools">
                 <div class="strategies">
-                  <div class="strat-title">
+                  <div class="sub-sub-title">
                     Strategies Used
                   </div>
                   <div class="strategies-details">
@@ -207,7 +217,184 @@
                   </div>
                 </div>
                 <div class="tools">
-                  <div class="strat-title">Tools</div>
+                  <div class="sub-sub-title">Tools</div>
+                
+                    <div class="tools-details">
+                      <span>Hubspot</span>
+                      <span>Canva</span>
+                      <span>Google Analytics</span>
+                      <span>Hubspot</span>
+                      <span>Hubspot</span>
+                      <span>Hubspot</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="case-study-card hidden" id="article-community-building">
+          <div class="card-content">
+            <div class="case-study-card-texts">
+              <h2 class="card-title">Community Building</h2>
+              <div class="card-title-button">
+                <span><i class="bx bx-group"></i>
+                  OrderSounds</span>
+            <span><i class="bx bx-loader-circle"></i>
+              Beat Marketplace</span>
+            <span><i class="bx bx-calendar"></i>
+              2023-2025</span>
+              </div>
+              
+            </div>
+            
+            <div class="case-study-details">
+              <div class="case-study-image">
+              <div class="product-details">
+                <p>Product Overview</p>
+              </div>
+            </div>
+
+              <div class="challenge-solution">
+                <div class="challenge-solution-card">
+                  <div class="cs-title">Challenge</div>
+                  <div class="cs-details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis. Illum, deleniti dolorem sed iste tempore quisquam aliquam esse eius laboriosam, facilis expedita maxime quasi!
+                  </div>
+                </div>
+                <div class="challenge-solution-card">
+                  <div class="cs-title">Solution</div>
+                  <div class="cs-details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis. Illum, deleniti dolorem sed iste tempore quisquam aliquam esse eius laboriosam, facilis expedita maxime quasi!
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-summary">
+                <div class="result-title">
+                  Results
+                </div>
+                <div class="result-boxes">
+                <div class="result-box">
+                  <p class="result-number">300%</p>
+                  <p class="result-text">Increase in data throughput</p>
+                  <p>Sales enablement</p>
+                </div>
+                <div class="result-box">
+                  <p class="result-number">40%</p>
+                  <p class="result-text">Reduction in latency</p>
+                  <p>Sales enablement</p>
+                </div>
+                <div class="result-box">
+                  <p class="result-number">High</p>
+                  <p class="result-text">Cloud platform performance</p>
+                  <p>Sales enablement</p>
+                </div>
+                </div>
+              </div>
+
+              <div class="strategies-tools">
+                <div class="strategies">
+                  <div class="sub-sub-title">
+                    Strategies Used
+                  </div>
+                  <div class="strategies-details">
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+                  </div>
+                </div>
+                <div class="tools">
+                  <div class="sub-sub-title">Tools</div>
+                
+                    <div class="tools-details">
+                      <span>Hubspot</span>
+                      <span>Canva</span>
+                      <span>Google Analytics</span>
+                      <span>Hubspot</span>
+                      <span>Hubspot</span>
+                      <span>Hubspot</span>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-study-card hidden" id="article-rebrand">
+          <div class="card-content">
+            <div class="case-study-card-texts">
+              <h2 class="card-title">Rebrand</h2>
+              <div class="card-title-button">
+                <span><i class="bx bx-group"></i>
+                  OrderSounds</span>
+            <span><i class="bx bx-loader-circle"></i>
+              Beat Marketplace</span>
+            <span><i class="bx bx-calendar"></i>
+              2023-2025</span>
+              </div>
+              
+            </div>
+            
+            <div class="case-study-details">
+              <div class="case-study-image">
+              <div class="product-details">
+                <p>Product Overview</p>
+              </div>
+            </div>
+
+              <div class="challenge-solution">
+                <div class="challenge-solution-card">
+                  <div class="cs-title">Challenge</div>
+                  <div class="cs-details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis. Illum, deleniti dolorem sed iste tempore quisquam aliquam esse eius laboriosam, facilis expedita maxime quasi!
+                  </div>
+                </div>
+                <div class="challenge-solution-card">
+                  <div class="cs-title">Solution</div>
+                  <div class="cs-details">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, officiis. Illum, deleniti dolorem sed iste tempore quisquam aliquam esse eius laboriosam, facilis expedita maxime quasi!
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-summary">
+                <div class="result-title">
+                  Results
+                </div>
+                <div class="result-boxes">
+                <div class="result-box">
+                  <p class="result-number">300%</p>
+                  <p class="result-text">Increase in data throughput</p>
+                  <p>Sales enablement</p>
+                </div>
+                <div class="result-box">
+                  <p class="result-number">40%</p>
+                  <p class="result-text">Reduction in latency</p>
+                  <p>Sales enablement</p>
+                </div>
+                <div class="result-box">
+                  <p class="result-number">High</p>
+                  <p class="result-text">Cloud platform performance</p>
+                  <p>Sales enablement</p>
+                </div>
+                </div>
+              </div>
+
+              <div class="strategies-tools">
+                <div class="strategies">
+                  <div class="sub-sub-title">
+                    Strategies Used
+                  </div>
+                  <div class="strategies-details">
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+<span><i class="bx bx-bar-chart"></i>Content Marketing Strategies</span>
+                  </div>
+                </div>
+                <div class="tools">
+                  <div class="sub-sub-title">Tools</div>
                 
                     <div class="tools-details">
                       <span>Hubspot</span>
@@ -223,7 +410,7 @@
           </div>
         </article>
       </div>
-    </div>
+    
     <button>Discuss your project <i class="bx bx-right-arrow-alt"></i></button>
   </section>
 
@@ -483,35 +670,211 @@
     </div>
 
     <div class="certifications">
-      <div class="cert-title">Certifications</div>
+      <div class="cert-title sub-sub-title">Certifications</div>
+      <div class="cert-content">
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cfbb00; background-color: #f3fc79;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Social Media Marketing</span>
+            <span class="cert-company">Hubspot Academy</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cfbb00; background-color: #f3fc79;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Digital Marketing</span>
+            <span class="cert-company">Hubspot Academy</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #30cf00; background-color: #84fc79;" ></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Fundamentals of Digital Marketing</span>
+            <span class="cert-company">Google</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cf7c00; background-color: #fcd979;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2025</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">SEO Essentials</span>
+            <span class="cert-company">SEMrush</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cf7c00; background-color: #fcd979;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2025</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Keyword Research Essentials</span>
+            <span class="cert-company">SEMrush</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cf7c00; background-color: #fcd979;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">On-Page SEO Essentials</span>
+            <span class="cert-company">SEMrush</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cf7c00; background-color: #fcd979;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Technical SEO and AI Search Essentials</span>
+            <span class="cert-company">SEMrush</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">HTML & CSS</span>
+            <span class="cert-company">TestDome</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        <a href="#" class="cert-card">
+          <span class="top-cert-card">
+            <i class="bx bx-medal" style="color: #cf2900; background-color: #fc8d79;"></i>
+            <span class="cert-date">
+              <i class="bx bx-calendar"></i><span>2024</span>
+            </span>
+          </span>
+          <span class="bottom-cert-card">
+            <span class="cert-card-title">Adobe Certified Professional- Photoshop</span>
+            <span class="cert-company">Adobe</span>
+            <span class="cert-details">Indept course about everything in search engine optimization</span>
+          </span>
+        </a>
+        
+      </div>
     </div>
   </section>
 
 
 
   <section class="testimonial-section">
-    <div class="container">
+    
      
-
-      <h2 class="section-title client-section-title">Projects</h2>
-      <div class="designs">
-        
-      </div>
-      <div class="carousels"></div>
-      <div class="growthandmetrics"></div>
-      <div class="client-logos">
-        <div class="logo-group">
-          <div class="logo">**Logo 1**</div>
-          <div class="logo">**Logo 2**</div>
-          <div class="logo">**Logo 3**</div>
+        <div class="project-container">
+          <div class="project-title">
+             <p class="overline">Project</p>
+      <h2 class="section-title">Showcase Of Work</h2>
+      <p class="subtitle">
+        Building innovative technologies and <span class="blue-text">strategies for business success.</span>
+      </p>
+          </div>
+              <div class="designs">
+                <p class="sub-sub-title"><i class="bx bx-palette"></i> 
+                <span> <span>Static Designs</span>Beautiful designs I've created</span></p>
+                <div class="design">
+                  <div class="design-card">
+                    <img src="../images/synergic-post.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img  src="../images/creacove-post.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/synergic-post (2).png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img  src="../images/creacove-post-2.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img  src="../images/creacove-post-3.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/ordersounds-post-1.png" alt="">
+                  </div>
+                </div>
+                <button class="arrow-btn left-arrow"><i class="bx bx-left-arrow-alt"></i></button>
+                <button class="arrow-btn right-arrow"><i class="bx bx-right-arrow-alt"></i></button>
+              </div>
+              <div class="designs">
+                <p class="sub-sub-title"><i class="bx bx-images"></i> <span> <span>Carousels</span>Beautiful designs I've created</span></p>
+                <div class="design carousel">
+                  <div class="design-card">
+                    <img src="../images/Carousel-1.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/Carousel_2.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/Carousel_3.png" alt="">
+                  </div>
+                </div>
+                <button class="arrow-btn left-arrow"><i class="bx bx-left-arrow-alt"></i></button>
+                <button class="arrow-btn right-arrow"><i class="bx bx-right-arrow-alt"></i></button>
+              </div>
+              <div class="designs">
+                <p class="sub-sub-title"><i class="bx bx-line-chart"></i><span> <span>Growth</span>Beautiful designs I've created</span></p>
+                <div class="design carousel">
+                  <div class="design-card">
+                    <img src="../images/Growth_1.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/Growth_2.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/Growth_3.png" alt="">
+                  </div>
+                  <div class="design-card">
+                    <img src="../images/Growth_4.png" alt="">
+                  </div>
+                  
+                  
+                </div>
+                <button class="arrow-btn left-arrow"><i class="bx bx-left-arrow-alt"></i></button>
+                <button class="arrow-btn right-arrow"><i class="bx bx-right-arrow-alt"></i></button>
+              </div>
+              
+              
         </div>
-        <div class="logo-group">
-          <div class="logo">**Logo 4**</div>
-          <div class="logo">**Logo 5**</div>
-          <div class="logo">**Logo 6**</div>
-        </div>
-      </div>
 
+        <div class="testimonial-container">
        <h2 class="section-title">Testimonials</h2>
       <div class="testimonial-content">
         <div class="testimonial-item">
@@ -546,7 +909,8 @@
         </div>
       
       </div>
-    </div>
+      </div>
+    
 
   </section>
 
@@ -554,22 +918,113 @@
 
   <section class="cta-section">
     <div class="container cta-container">
-      <h2 class="cta-title">Want to bring us on your team?</h2>
-      <p class="cta-subtitle">
-        Let us know what your project is about and we’ll get back to you with a
+      <p class="overline">Get in touch</p>
+      <h2 class="cta-title">Lets Work Together</h2>
+      <p class="subtitle">
+        Let me know what your project is about and i'll get back to you with a
         custom proposal.
       </p>
-      <form class="cta-form">
-        <input type="text" placeholder="Your Name" />
-        <input type="email" placeholder="Email Address" />
-        <button type="submit" class="btn btn-primary">
-          Send Message
-        </button>
-      </form>
+      <div class="contact-info">
+                  
+                    
+                    <a href="mailto:vanessaomoragbon@outlook.com" class="btn btn-primary"
+                      >Send Message <i class="bx bx-mail-send"></i>
+                    </a>
+                    <a href="#services" class="btn btn-secondary"
+                >Download Resume <i class="bx bx-download"></i
+              ></a>
+                
+                </div>
+      
+    </div>
+
+    <div class="why-choose-me">
+      <h2 class="sub-title">What I Bring To Your Team</h2>
+      <div class="why-choose-content">
+        <div class="why-choose-card">
+          <span><i class="bx bx-dollar-circle"></i></span>
+          <span>ROI Focused</span>
+          <p>Every initiative ties to measurable KPIs and pipeline impact.</p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="bx bx-bar-chart"></i></span>
+          <span>Data Driven</span>
+          <p>Every initiative ties to measurable KPIs and pipeline impact.</p>
+        </div>
+        <div class="why-choose-card">
+          <i class="bx bx-line-chart"></i>
+          <span>Operational</span>
+          <p>Every initiative ties to measurable KPIs and pipeline impact.</p>
+        </div>
+        <div class="why-choose-card">
+          <span><i class="bx bx-group"></i></span>
+          <span>Customer Centered</span>
+          <p>Every initiative ties to measurable KPIs and pipeline impact.</p>
+        </div>
+      </div>
     </div>
   </section>
 
           </main>
+
+          <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <h3>Vanessa Omoragbon</h3>
+          <a href="mailto:vanessaomoragbon@outlook.com" target="_blank"
+            >vanessaomoragbon@outlook.com</a
+          >
+          <a href="mailto:vanessaomoragbon@outlook.com" target="_blank"
+            >Lagos, Nigeria</a
+          >
+          <!-- <p>
+            Frontend Developer passionate about creating beautiful, functional,
+            and accessible web experiences that make a difference.
+          </p> -->
+        </div>
+        <div class="footer-right">
+          <div class="footer-links">
+            <a href="#home">Home</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#about">About</a>
+
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/vanessa-omoragbon-110462185?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              title="LinkedIn"
+              ><i class="bx bxl-linkedin-square"></i
+            ></a>
+
+            <a
+              href="https://github.com/vanessadesuwa"
+              target="_blank"
+              title="GitHub"
+              ><i class="bx bxl-github"></i
+            ></a>
+            <a
+              href="https://youtube.com/@nessa_adesuwa?si=3-pft7rpHMfzTjBJ"
+              target="_blank"
+              title="Youtube"
+              ><i class="bx bxl-youtube"></i
+            ></a>
+            <a
+              href="https://x.com/nessa_adesuwa?t=kD8q-1O9aUdaahAHkLJsKQ&s=09"
+              target="_blank"
+              title="Twitter"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Vanessa Omoragbon. All rights reserved.</p>
+      </div>
+    </footer>
 
          
         <script src="social.js" ></script>

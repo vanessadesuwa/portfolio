@@ -547,10 +547,8 @@ footer {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 1rem;
-  /* font-weight: 600; */
   transition: color 0.3s;
   display: block;
-  /* padding-bottom: 0.5rem; */
 }
 
 .footer-links a:hover {
@@ -560,7 +558,6 @@ footer {
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  /* border-top: 1px solid var(--border-color); */
   color: var(--text-muted);
   font-size: 0.85rem;
 }
@@ -568,8 +565,6 @@ footer {
 /* Mobile Menu */
 .close-menu {
   display: none;
-  /* position: relative;
-  left: 1.4rem; */
   transition: all 0.3s ease;
 }
 
