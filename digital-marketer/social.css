@@ -195,8 +195,11 @@ header i {
   cursor: pointer;
 }
 
-.mobile-menu-btn i:hover {
+.mobile-menu-btn i {
   color: var(--accent-blue);
+}
+.mobile-menu-btn i:hover {
+  color: var(--text-primary);
 }
 
 .mobile-menu {
@@ -546,6 +549,7 @@ header i {
   background-position: center;
   width: 100%;
   aspect-ratio: 16/9;
+  min-height: 480px;
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
@@ -1303,6 +1307,10 @@ footer {
     min-height: 0rem;
   }
 
+  header h1 span {
+    display: none;
+  }
+
   header,
   .top-header {
     padding-inline: 3%;
@@ -1530,5 +1538,11 @@ footer {
   }
   .cert-details {
     font-size: 0.7rem;
+  }
+
+  .strategies .sub-sub-title,
+  .tools .sub-sub-title,
+  .result-title {
+    font-size: 1rem;
   }
 }
