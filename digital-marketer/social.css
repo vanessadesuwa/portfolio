@@ -285,27 +285,33 @@ header h1 span {
 
 /* Hero Section */
 .hero {
-  padding: 8rem 5% 6rem;
+  padding: 10rem 8% 4rem;
+  padding-left: 15%;
+  height: 100vh;
   max-width: 90rem;
   margin: 0 auto;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
   background: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   /* padding: 0 10%; */
-  gap: 1rem;
+  gap: 3rem;
   /* background-color: aquamarine; */
 }
 
 .hero-image {
   aspect-ratio: 1/1;
-  max-width: 200px;
+  /* max-width: 200px; */
+  max-width: 300px;
   border-radius: 50%;
   overflow: hidden;
   border: 6px solid var(--accent-blue);
@@ -313,10 +319,10 @@ header h1 span {
 }
 
 .hero-text {
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
 }
 
 .hero-image img {
@@ -326,7 +332,7 @@ header h1 span {
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   font-size: 0.95rem;
   font-weight: 500;
@@ -344,6 +350,7 @@ header h1 span {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  width: 100%;
 }
 
 .btn-primary {
@@ -369,8 +376,8 @@ header h1 span {
 }
 
 .hero h1 {
-  font-size: 2.7rem;
-  width: 50%;
+  font-size: 3.2rem;
+  /* width: 50%; */
   line-height: 1.1;
   font-weight: 500;
   color: var(--text-primary);
@@ -389,7 +396,7 @@ header h1 span {
 .hero p {
   color: var(--text-secondary);
   font-size: 1.15rem;
-  width: 45%;
+  width: 80%;
   /* background-color: aquamarine; */
   padding-bottom: 2rem;
   justify-self: center;
@@ -411,6 +418,7 @@ header h1 span {
 .hero-image,
 .hero-text {
   flex: 1;
+  width: 100%;
 }
 
 .main-content {
@@ -1349,17 +1357,22 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
+  .hero {
+    padding: 10rem 5% 4rem;
+    padding-left: 5%;
+  }
+
   .card-content {
     flex-direction: column; /* Stack image and details on smaller screens */
     min-height: auto;
   }
 
   .hero h1 {
-    width: 70%;
+    font-size: 3rem;
   }
-  .hero p {
+  /* .hero p {
     width: 60%;
-  }
+  } */
 
   .case-studies-section,
   .testimonial-section,
@@ -1374,13 +1387,33 @@ footer {
   }
 }
 
+@media (max-width: 1024px) {
+  .hero h1 {
+    width: 90%;
+  }
+
+  .hero-text h1,
+  .main-title,
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    width: 85%;
+  }
+
+  .hero {
+    padding-right: 0;
+    padding-left: 8%;
+  }
+
+  .hero-image {
+    max-width: 250px;
+  }
+}
 @media (max-width: 1000px) {
   .case-study-layout {
     flex-direction: column;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
   }
 
   .case-study-sidebar {
@@ -1422,6 +1455,34 @@ footer {
   }
 }
 
+@media (max-width: 920px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-image {
+    max-width: 200px;
+  }
+
+  .hero {
+    padding: 8rem 5% 4rem;
+    padding-inline: 5%;
+    height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-text h1,
+  .main-title,
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .result-box {
     min-height: 0rem;
@@ -1443,10 +1504,10 @@ footer {
     padding-inline: 3%;
   }
 
-  .section-title,
+  /* .section-title,
   .main-title {
     font-size: 2.5rem;
-  }
+  } */
 
   .apps {
     grid-template-columns: repeat(2, 1fr);
@@ -1676,9 +1737,9 @@ footer {
   }
 }
 
-@media (max-width: 420px) {
+/* @media (max-width: 420px) {
   .contact-info {
     flex-direction: column;
     align-items: center;
   }
-}
+} */
