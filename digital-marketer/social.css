@@ -288,7 +288,8 @@ header h1 span {
   padding: 10rem 8% 4rem;
   padding-left: 15%;
   height: 100vh;
-  max-width: 90rem;
+  max-height: 900px;
+  max-width: 120rem;
   margin: 0 auto;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
@@ -1356,6 +1357,14 @@ footer {
 }
 
 /* Responsive Adjustments */
+@media (min-width: 1400px) {
+  .hero {
+    height: auto;
+    padding: 10rem 8% 4rem;
+    padding-left: 8%;
+  }
+}
+
 @media (max-width: 1200px) {
   .hero {
     padding: 10rem 5% 4rem;
@@ -1466,9 +1475,9 @@ footer {
   }
 
   .hero {
-    padding: 8rem 5% 4rem;
+    padding: 8rem 5% 2rem;
     padding-inline: 5%;
-    height: auto;
+    /* height: auto; */
   }
 
   .hero-text {
