@@ -1,28 +1,41 @@
 :root {
   --bg-primary: hsl(0, 0%, 100%);
-  --bg-secondary: hsl(210, 100%, 99%);
-  --bg-accent: hsl(210, 100%, 97%);
+  --bg-secondary: hsl(210, 20%, 99%);
+  --bg-accent: hsl(210, 20%, 98%);
   --bg-card: hsl(0, 0%, 100%);
   --text-primary: hsl(215, 25%, 20%);
   --text-secondary: hsl(215, 15%, 40%);
   --text-muted: hsl(215, 10%, 60%);
   --text-black: #3a3a3a;
-  --accent-blue: hsl(210, 100%, 55%);
-  --accent-blue-hover: hsl(210, 100%, 50%);
-  --accent-blue-light: hsl(210, 100%, 92%);
-  --accent-blue-lighter: hsl(210, 100%, 96%);
-  --accent-blue-dark: hsl(210, 90%, 45%);
-  --accent-sky: hsl(200, 100%, 60%);
-  --accent-navy: hsl(220, 80%, 30%);
+  --accent-blue: hsl(210, 15%, 10%);
+  --accent-blue-hover: hsl(210, 15%, 15%);
+  --accent-blue-light: hsl(210, 20%, 95%);
+  --accent-blue-lighter: hsl(210, 20%, 98%);
+  --accent-blue-dark: hsl(210, 15%, 5%);
+  --accent-sky: hsl(210, 20%, 60%);
+  --accent-navy: hsl(210, 20%, 45%);
   --border-color: hsl(210, 30%, 85%);
-  --shadow-sm: 0 1px 3px hsla(210, 50%, 40%, 0.08);
-  --shadow-md: 0 4px 12px hsla(210, 50%, 40%, 0.1);
-  --shadow-lg: 0 10px 30px hsla(210, 50%, 40%, 0.12);
+  --shadow-sm: 0 1px 3px hsla(210, 20%, 40%, 0.08);
+  --shadow-md: 0 4px 12px hsla(210, 20%, 40%, 0.1);
+  --shadow-lg: 0 10px 30px hsla(210, 20%, 40%, 0.12);
+  --rainbow: linear-gradient(
+    95deg,
+    hsl(220, 85%, 55%) 0%,
+    hsl(150, 65%, 45%) 25%,
+    hsl(45, 90%, 55%) 50%,
+    hsl(0, 75%, 55%) 75%,
+    hsl(270, 75%, 60%) 100%
+  );
   --gradient-blue: linear-gradient(
     135deg,
-    hsl(210, 100%, 55%),
-    hsl(200, 100%, 60%)
+    hsl(345, 30%, 45%),
+    hsl(210, 20%, 40%)
   );
+  /* --gradient-blue: linear-gradient(
+    135deg,
+    hsl(210, 10%, 15%),
+    hsl(200, 10%, 8%)
+  ); */
 }
 
 * {
@@ -54,7 +67,7 @@ header {
     var(--accent-blue-lighter),
     var(--bg-primary)
   );
-  padding: 3.5rem 5% 1rem;
+  padding: 3rem 5% 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,13 +133,27 @@ header h1 {
   color: var(--text-black);
   text-transform: uppercase;
   display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
+  flex-direction: column;
+  align-items: start;
+  background: var(--text-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* gap: 0.8rem; */
 }
 
-header i {
+/* header i {
   font-size: 1.5rem;
   color: #3a3a3a;
+} */
+
+header h1 span {
+  font-size: 0.7rem;
+
+  background: var(--rainbow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav-links {
@@ -216,7 +243,7 @@ header i {
   align-items: center;
   transition: all 0.3s ease;
   transform: translateY(-100%);
-  padding: 1rem 0;
+  padding: 3rem 0 2rem;
 }
 
 .mobile-menu.open {
@@ -266,11 +293,14 @@ header i {
   border-radius: 50%;
   overflow: hidden;
   border: 6px solid var(--accent-blue);
-  box-shadow: 0 0 24px var(--accent-sky);
+  /* box-shadow: 0 0 24px hsla(270, 75%, 60%, 0.9); */
 }
 
 .hero-text {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-image img {
@@ -322,26 +352,28 @@ header i {
   transform: scale(1.05);
 }
 
-.hero h2 {
-  font-size: 2rem;
-  line-height: 1.2;
-  font-weight: 400;
-  color: var(--accent-blue);
-  padding-bottom: 1rem;
+.hero h1 {
+  font-size: 2.7rem;
+  width: 50%;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
 }
 
-.hero h1 {
+/* .hero h1 {
   font-size: 3rem;
   text-transform: uppercase;
   line-height: 1.2;
   font-weight: 400;
   padding-bottom: 0.3rem;
-}
+} */
 
 .hero p {
   color: var(--text-secondary);
   font-size: 1.15rem;
-  width: 70%;
+  width: 45%;
   /* background-color: aquamarine; */
   padding-bottom: 2rem;
   justify-self: center;
@@ -395,7 +427,7 @@ header i {
   color: var(--text-secondary);
   font-size: 1.15rem;
   margin-bottom: 4rem;
-  width: 80%;
+  width: 50%;
   justify-self: center;
 }
 
@@ -461,7 +493,7 @@ header i {
   color: var(--accent-blue-dark);
   /* font-weight: 700; */
   border: 1px solid var(--accent-blue-dark);
-  box-shadow: 0 0 8px var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-blue-dark);
 }
 
 .nav-item.active span:last-child {
@@ -537,6 +569,16 @@ header i {
   align-items: center;
 }
 
+.card-title-button span:first-child {
+  background-color: hsl(220, 85%, 95%);
+}
+.card-title-button span:nth-child(2) {
+  background-color: hsl(150, 65%, 95%);
+}
+.card-title-button span:nth-child(3) {
+  background-color: hsl(0, 75%, 95%);
+}
+
 .card-title-button span i {
   color: var(--accent-blue-dark);
 }
@@ -594,12 +636,16 @@ header i {
 
 .cs-title {
   margin-bottom: 0.7rem;
-  color: var(--accent-blue);
+  color: hsl(0, 75%, 55%);
   font-size: 1.3rem;
 }
 
 .cs-details {
-  color: var(--text-black);
+  color: var(--text-primary);
+}
+
+.challenge-solution .challenge-solution-card:last-child .cs-title {
+  color: hsl(150, 65%, 45%);
 }
 
 .results-summary {
@@ -634,7 +680,7 @@ header i {
 .result-number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--accent-blue);
+  color: hsl(220, 85%, 55%);
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -683,7 +729,7 @@ header i {
 }
 .strategies-details span i {
   font-size: 1.2rem;
-  color: var(--accent-blue);
+  color: hsl(45, 90%, 55%);
 }
 
 .tools {
@@ -699,7 +745,7 @@ header i {
 }
 
 .tools-details span {
-  background-color: var(--border-color);
+  background-color: hsl(270, 75%, 90%);
   padding: 0 0.4rem;
   border-radius: 0.5rem;
 }
@@ -762,17 +808,51 @@ header i {
   /* margin-bottom: 0.5rem; */
   font-weight: 600;
 }
+
+.progress-bar {
+  height: 100%;
+  background: var(--gradient-blue);
+  border-radius: 0.4rem;
+}
+
+.expertise-column .expertise-item:first-child .item-title i {
+  color: hsl(220, 85%, 55%);
+}
+.expertise-column
+  .expertise-item:first-child
+  .expertise-volume
+  .progress-bar-container
+  .progress-bar {
+  background: hsl(220, 85%, 55%);
+}
+.expertise-column .expertise-item:nth-child(2) .item-title i {
+  color: hsl(150, 65%, 45%);
+}
+.expertise-column
+  .expertise-item:nth-child(2)
+  .expertise-volume
+  .progress-bar-container
+  .progress-bar {
+  background: hsl(150, 65%, 45%);
+}
+.expertise-column .expertise-item:nth-child(3) .item-title i {
+  color: hsl(0, 75%, 55%);
+}
+.expertise-column
+  .expertise-item:nth-child(3)
+  .expertise-volume
+  .progress-bar-container
+  .progress-bar {
+  background: hsl(0, 75%, 55%);
+}
+
 .progress-bar-container {
   background-color: var(--accent-blue-light);
   gap: 1rem;
   height: 0.7rem;
   border-radius: 0.4rem;
 }
-.progress-bar {
-  height: 100%;
-  background: var(--gradient-blue);
-  border-radius: 0.4rem;
-}
+
 .progress-label {
   display: flex;
   justify-content: space-between;
@@ -881,7 +961,7 @@ header i {
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 0 8px hsla(210, 100%, 50%, 0.5);
+  box-shadow: 0 0 8px hsla(210, 20%, 50%, 0.5);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   text-decoration: none;
@@ -890,7 +970,7 @@ header i {
 
 .cert-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 12px hsla(210, 100%, 50%, 0.9);
+  box-shadow: 0 0 12px hsla(210, 20%, 45%, 0.9);
 }
 
 .top-cert-card {
@@ -980,16 +1060,17 @@ header i {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text-primary);
 }
 .designs .sub-sub-title span {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
   display: flex;
   flex-direction: column;
 }
 
 .designs .sub-sub-title span span {
   font-size: 1.5rem;
+  color: var(--text-primary);
 }
 
 .design {
@@ -1088,15 +1169,14 @@ header i {
 .cta-container {
   max-width: 80rem;
 }
+.cta-container .subtitle {
+  margin-bottom: 2rem;
+}
 .cta-title {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
-.cta-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 3rem;
-}
+
 .cta-form {
   display: flex;
   justify-content: center;
@@ -1307,8 +1387,8 @@ footer {
     min-height: 0rem;
   }
 
-  header h1 span {
-    display: none;
+  .hero h1 {
+    width: 100%;
   }
 
   header,
@@ -1363,6 +1443,7 @@ footer {
 
   .why-choose-card {
     background-color: var(--accent-blue-lighter);
+    border: 1px solid var(--border-color);
     padding: 1rem;
     width: fit-content;
     border-radius: 0.5rem;
