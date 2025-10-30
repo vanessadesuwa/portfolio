@@ -67,7 +67,7 @@ header {
     var(--accent-blue-lighter),
     var(--bg-primary)
   );
-  padding: 3rem 5% 0.5rem;
+  padding: 3rem 8% 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,7 +85,7 @@ header {
   left: 0;
   right: 0;
   background-color: var(--accent-blue);
-  padding: 0.2rem 5%;
+  padding: 0.2rem 8%;
   /* gap: 1.5rem; */
   z-index: 10000;
 }
@@ -265,6 +265,22 @@ header h1 span {
   width: 100%;
   text-decoration: none;
   color: var(--text-primary);
+}
+
+.mobile-menu li:nth-child(1):hover a {
+  color: hsl(220, 85%, 55%);
+}
+.mobile-menu li:nth-child(2):hover a {
+  color: hsl(150, 65%, 45%);
+}
+.mobile-menu li:nth-child(3):hover a {
+  color: hsl(45, 90%, 55%);
+}
+.mobile-menu li:nth-child(4):hover a {
+  color: hsl(0, 75%, 55%);
+}
+.mobile-menu li:nth-child(5):hover a {
+  color: hsl(270, 75%, 60%);
 }
 
 /* Hero Section */
@@ -531,6 +547,7 @@ header h1 span {
   overflow: hidden;
   border: 1px solid var(--border-color);
   padding: 1.5rem;
+  width: 100%;
 }
 
 .case-study-card.hidden {
@@ -570,13 +587,13 @@ header h1 span {
 }
 
 .card-title-button span:first-child {
-  background-color: hsl(220, 85%, 95%);
+  background-color: hsl(220, 85%, 98%);
 }
 .card-title-button span:nth-child(2) {
-  background-color: hsl(150, 65%, 95%);
+  background-color: hsl(150, 65%, 98%);
 }
 .card-title-button span:nth-child(3) {
-  background-color: hsl(0, 75%, 95%);
+  background-color: hsl(0, 75%, 98%);
 }
 
 .card-title-button span i {
@@ -745,7 +762,7 @@ header h1 span {
 }
 
 .tools-details span {
-  background-color: hsl(270, 75%, 90%);
+  background-color: hsl(270, 75%, 95%);
   padding: 0 0.4rem;
   border-radius: 0.5rem;
 }
@@ -1323,24 +1340,47 @@ footer {
   font-size: 0.85rem;
 }
 
+.case-studies-section,
+.testimonial-section,
+.cta-section,
+.expertise-section {
+  padding-inline: 8%;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .card-content {
     flex-direction: column; /* Stack image and details on smaller screens */
     min-height: auto;
   }
-}
 
-.case-studies-section,
-.testimonial-section,
-.cta-section,
-.expertise-section {
-  padding-inline: 5%;
+  .hero h1 {
+    width: 70%;
+  }
+  .hero p {
+    width: 60%;
+  }
+
+  .case-studies-section,
+  .testimonial-section,
+  .cta-section,
+  .expertise-section {
+    padding-inline: 5%;
+  }
+
+  header,
+  .top-header {
+    padding-inline: 5%;
+  }
 }
 
 @media (max-width: 1000px) {
   .case-study-layout {
     flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
 
   .case-study-sidebar {
@@ -1539,7 +1579,7 @@ footer {
     width: 100%;
   }
 
-  .contact-info {
+  .cta-container .contact-info {
     flex-direction: column;
     align-items: center;
   }
@@ -1553,10 +1593,6 @@ footer {
 
   .strategies-details span {
     font-size: 0.7rem;
-  }
-
-  .case-study-card {
-    width: 100%;
   }
 
   .result-number {
@@ -1593,14 +1629,26 @@ footer {
     font-size: 1.5rem;
   }
 
-  .hero-text h2 {
-    font-size: 1.3rem;
+  .hero-content {
+    padding: 0;
+  }
+
+  /* .hero-text {
+    background-color: #000;
+  } */
+
+  .hero-text h1 {
+    width: 90%;
   }
 
   .hero-text p,
   .subtitle {
     font-size: 0.95rem;
     width: 100%;
+  }
+
+  .hero-text p {
+    width: 90%;
   }
 
   .cert-date i {
@@ -1625,5 +1673,12 @@ footer {
   .tools .sub-sub-title,
   .result-title {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
   }
 }
