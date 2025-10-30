@@ -1477,6 +1477,7 @@ footer {
   .hero {
     padding: 8rem 5% 2rem;
     padding-inline: 5%;
+    max-height: 800px;
     /* height: auto; */
   }
 
@@ -1746,9 +1747,9 @@ footer {
   }
 }
 
-/* @media (max-width: 420px) {
+@media (max-width: 380px) {
   .contact-info {
     flex-direction: column;
     align-items: center;
   }
-} */
+}
