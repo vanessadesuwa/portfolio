@@ -22,18 +22,19 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.7rem;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--off-white);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dark-blue);
+  border: 2px solid var(--off-white);
+  background: hsl(0, 0%, 15%);
   border-radius: 1rem;
-}
+} */
 
 /* Navbar */
 body.no-scroll {
