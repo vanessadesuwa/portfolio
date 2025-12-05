@@ -299,7 +299,7 @@ header h1 span {
   padding-left: 15%;
   height: 100vh;
   max-height: 900px;
-  max-width: 120rem;
+  /* max-width: 120rem; */
   margin: 0 auto;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
@@ -1085,6 +1085,9 @@ header h1 span {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .designs {
@@ -1233,7 +1236,9 @@ header h1 span {
 }
 .cta-container {
   max-width: 80rem;
+  margin: 0 auto;
 }
+
 .cta-container .subtitle {
   margin-bottom: 2rem;
 }
@@ -1398,9 +1403,12 @@ footer {
 /* Responsive Adjustments */
 @media (min-width: 1400px) {
   .hero {
-    height: auto;
     padding: 10rem 8% 4rem;
     padding-left: 8%;
+  }
+
+  .hero-content {
+    gap: 10rem;
   }
 }
 

@@ -121,7 +121,7 @@ nav {
 /* Hero Section */
 .hero {
   padding: 10rem 5% 6rem;
-  max-width: 90rem;
+  /* max-width: 90rem; */
   margin: 0 auto;
   border-bottom: 1px solid var(--border-color);
 }
@@ -163,6 +163,8 @@ nav {
   display: flex;
   gap: 4rem;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-texts {
@@ -288,8 +290,8 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 3rem 10% 2rem;
-  /* max-width: 55rem; */
-  /* margin: 0 auto; */
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .tech-card {
@@ -346,6 +348,8 @@ nav {
   display: grid;
   gap: 3rem;
   padding-top: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .project-card {
