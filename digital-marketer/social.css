@@ -45,8 +45,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -133,7 +134,9 @@ header {
   color: var(--bg-primary);
   /* font-size: 1.8rem; */
   font-size: 1.3rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
 
 .floating-social-links a:hover {
@@ -461,9 +464,10 @@ header h1 span {
   text-align: center;
   color: var(--text-secondary);
   font-size: 1.15rem;
-  margin-bottom: 4rem;
+  margin: 0 auto 4rem auto;
+  /* margin-bottom: 4rem; */
   width: 50%;
-  justify-self: center;
+  /* justify-self: center; */
 }
 
 /* 1. Case Studies Section */
@@ -506,7 +510,9 @@ header h1 span {
   font-weight: 500;
   color: var(--text-secondary);
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: center;
