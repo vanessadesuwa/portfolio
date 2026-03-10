@@ -86,12 +86,89 @@ document.addEventListener("DOMContentLoaded", () => {
       navItems.forEach((i) => i.classList.remove("active"));
       // Add active class to the clicked item
       this.classList.add("active");
-
-      // In a real application, this would trigger content change
-      console.log(`Loading content for: ${this.textContent}`);
     });
   });
+
+  // 3. Initialise slideshows on load
+  initializeSlideshows();
 });
+
+// --- CASE STUDY SLIDESHOW ---
+
+/**
+ * Holds the setInterval IDs for each slideshow container,
+ * preventing stacked intervals on repeated calls (e.g., tab switches).
+ * @type {WeakMap<HTMLElement, number>}
+ */
+const slideshowIntervals = new WeakMap();
+
+/**
+ * Reads `data-slides` from every `.slideshow-container`, builds slide + dot
+ * elements, and starts a cross-fade cycle.
+ * Safe to call multiple times — clears previous intervals first.
+ */
+function initializeSlideshows() {
+  document.querySelectorAll(".slideshow-container").forEach((container) => {
+    // Clear any existing interval for this container
+    if (slideshowIntervals.has(container)) {
+      clearInterval(slideshowIntervals.get(container));
+    }
+
+    const rawSlides = container.getAttribute("data-slides");
+    if (!rawSlides) return;
+
+    const imageUrls = rawSlides
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (imageUrls.length === 0) return;
+
+    // -- Build slide elements (only on first call -- check if already built)
+    const slidesWrapper = container.querySelector(".slideshow-slides");
+    const dotsWrapper = container.querySelector(".slideshow-dots");
+
+    if (slidesWrapper && slidesWrapper.children.length === 0) {
+      imageUrls.forEach((url, i) => {
+        const slide = document.createElement("div");
+        slide.className = "slide" + (i === 0 ? " active" : "");
+        slide.style.backgroundImage = `url("${url}")`;
+        slidesWrapper.appendChild(slide);
+
+        if (dotsWrapper) {
+          const dot = document.createElement("span");
+          dot.className = "slideshow-dot" + (i === 0 ? " active" : "");
+          dotsWrapper.appendChild(dot);
+        }
+      });
+    }
+
+    const slides = container.querySelectorAll(".slide");
+    const dots = container.querySelectorAll(".slideshow-dot");
+    if (slides.length <= 1) return;
+
+    let current = 0;
+
+    function goToSlide(index) {
+      slides[current].classList.remove("active");
+      dots[current]?.classList.remove("active");
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      dots[current]?.classList.add("active");
+    }
+
+    // Reset ALL slides/dots to inactive before switching to slide 0,
+    // so any previously-active slide doesn't bleed through on tab switch.
+    slides.forEach((s) => s.classList.remove("active"));
+    dots.forEach((d) => d?.classList.remove("active"));
+    goToSlide(0);
+
+    const intervalId = setInterval(() => {
+      goToSlide(current + 1);
+    }, 4000);
+
+    slideshowIntervals.set(container, intervalId);
+  });
+}
 
 // --- CAROUSEL INITIALIZATION FUNCTION (Reusable) ---
 
@@ -239,6 +316,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (targetArticle) {
         targetArticle.classList.remove("hidden");
       }
+
+      // 6. Re-initialise slideshows so the newly visible card starts cycling
+      initializeSlideshows();
     });
   });
 });

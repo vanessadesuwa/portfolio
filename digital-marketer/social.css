@@ -651,6 +651,67 @@ header h1 span {
   background-image: url(../images/creacove\ casestudy.png);
 }
 
+/* --- Dynamic Slideshow --- */
+.slideshow-container {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.slideshow-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* keep the product-details & dots above the slides */
+.slideshow-container .product-details,
+.slideshow-dots {
+  position: relative;
+  z-index: 1;
+}
+
+.slideshow-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.slideshow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.slideshow-dot.active {
+  background-color: #fff;
+  transform: scale(1.4);
+}
+
 .product-details {
   width: 100%;
   padding: 0.7rem;
